@@ -12,6 +12,8 @@ import javafx.stage.Stage;
 import javafx.scene.Group;
 import javafx.scene.shape.Rectangle;
 
+import javafx.scene.control.TextArea;
+import javafx.scene.control.Label;
 
 public class display extends Application{
 	
@@ -20,13 +22,17 @@ public class display extends Application{
 	private Group root;
 	private Flashcard f1;
 	private Flashcard f2;
-	private TextField t1;
-	private TextField t2;
+	//private TextField t1;
+	private TextArea t1;
+	private TextArea t2;
 	private Button submit;
 	private Button newFlashcard;
 	private Stage primaryStage;
 	
+	private Label term;
+	private Label Defination;
 	
+
 /////////	
 	 public void start (Stage stage) {
 			 
@@ -50,35 +56,35 @@ public class display extends Application{
 		mainScreen(primaryStage);
 		
 	}
-	
+	 
 	
 /////////
 	 public void mainScreen (Stage stage) {
 		
 		 /////// Submit
-		 submit = new Button("Create FlashCard");
-		 submit.setTranslateX(320);
+		 submit = new Button("Add to Deck");
+		 submit.setTranslateX(190);
 		 submit.setTranslateY(400);
 		 root = new Group(submit);
+		 
+	//styling
+		 submit.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 		 ///////
 		 
 		 /////// new FlashCard
 		 newFlashcard = new Button ("new FlashCard");
-		 newFlashcard.setTranslateX(250);
-		 newFlashcard.setTranslateY(100);
+		 newFlashcard.setTranslateX(370);
+		 newFlashcard.setTranslateY(400);
 		 root.getChildren().add(newFlashcard);
 		 ///////
+		//styling
+		 newFlashcard.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 		
-		 ///////Adding to Deck
-		 Button addtoDeck = new Button("Add to Deck");
-		 addtoDeck.setAlignment(Pos.CENTER);
-		 root.getChildren().add(addtoDeck);
-		 addtoDeck.setOnAction(this::AddtoDeck);
-		 ///////
 		 
 		 ///////creating new deck
 		 Button newDeck = new Button ("create new deck");
 		 newDeck.setTranslateX(400);
+		 newDeck.setTranslateY(550);
 		 root.getChildren().add(newDeck);
 		 
 		 ///////
@@ -88,6 +94,7 @@ public class display extends Application{
 		 ///////
 		 
 		 Scene scene = new Scene(root,600,600);
+		 scene.setFill(Color.rgb(203, 228, 233));
 		 stage.setScene(scene);
 		 stage.show(); 
 	}
@@ -98,19 +105,24 @@ public class display extends Application{
 		 //////// Question
 		 f1 = new Flashcard(t1.getText());
 		 f1.setQuestion(f1);
+		 root.getChildren().remove(t1);
 		 root.getChildren().add(f1);
 		 f1.setTranslateX(150);
 		 f1.setTranslateY(300);
-		 root.getChildren().remove(t1);
+		
 		 //////// 
 		 
 		 //////// Answer
 		 f2 = new Flashcard(t1.getText(),t2.getText());
 		 f2.setAnswer(f2);
+		 root.getChildren().remove(t2);
 		 root.getChildren().add(f2);
 		 f2.setTranslateX(350);
 		 f2.setTranslateY(300);
-		 root.getChildren().remove(t2);
+		 
+		 
+			f2.Deck();
+		 
 		 //////// 
 		  
 	 }
@@ -121,30 +133,39 @@ public class display extends Application{
 		 root.getChildren().remove(f1);
 		 root.getChildren().remove(f2);
 		 
+		 
+		 term = new Label("Term");
+		 term.setTranslateX(150);
+		 term.setTranslateY(280);
+		 root.getChildren().add(term);
+		 
 		 //////// Question
-		 t1 = new TextField("Question");
+		 t1 = new TextArea("Question");
 		 t1.setTranslateX(150);
 		 t1.setTranslateY(300);
 		 root.getChildren().add(t1);
+		 t1.setWrapText(true);
+		 t1.setMaxWidth(160);
+		 t1.setMaxHeight(5);
 		 //////// 
 		 
+		 
+		 
+		 Defination = new Label ("Defination");
+		 Defination.setTranslateX(350);
+		 Defination.setTranslateY(280);
+		 root.getChildren().add(Defination);
 		 //////// Answer
-		 t2 = new TextField("Answer");
+		 t2 = new TextArea("Answer");
 		 t2.setTranslateX(350);
 		 t2.setTranslateY(300);
 		 root.getChildren().add(t2);
+		 t2.setWrapText(true);
+		 t2.setMaxWidth(160);
+		 t2.setMaxHeight(5);
 		 
 	 }
-	 
-/////////	 
-		
-	public void AddtoDeck(ActionEvent event) {
-		
-		f2.Deck();
-		
-	}
-	 
-/////////
+
 	
 	public void createnewDeck(ActionEvent event) {
 		

@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3444b4c-247e-4c51-a8ea-2b2cc7e2d283" name="Changes" comment="" />
+    <list default="true" id="d3444b4c-247e-4c51-a8ea-2b2cc7e2d283" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/app/Flashcard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Flashcard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/display.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "fish58712"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/fish58712/FlashCardApp.git",
+    "accountId": "887d767c-7c06-449b-aaa3-11b9deb6fade"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2r5WThBKesI5eAGSWVcGjaULgxq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -18,8 +39,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/nimo/Desktop/Projects/FlashcardApp",
+    "last_opened_file_path": "/Users/nimo/git/FlashcardApp/FlashcardApp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -41,6 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1735849425242</updated>
       <workItem from="1735849426428" duration="52000" />
+      <workItem from="1739679823045" duration="414000" />
     </task>
     <servers />
   </component>

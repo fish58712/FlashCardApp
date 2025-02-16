@@ -5,11 +5,11 @@ import javafx.scene.paint.Color;
 import java.util.HashMap;
 
 
-public class Flashcard extends Label {
+public class Flashcard extends Label{
 	
 	private String question;
 	private String answer;
-	private HashMap<String,String> deck;
+	private HashMap<String,String> deck = new HashMap<>();
 	
 	//private deck flashcardDeck;	
 	
@@ -18,7 +18,7 @@ public class Flashcard extends Label {
 		this.question = question;
 		this.answer = answer;
 		
-		deck = new HashMap<>();
+		//deck = new HashMap<>();
 		deck.put(question, answer);
 	}
 	
@@ -31,7 +31,8 @@ public class Flashcard extends Label {
 	/////view flashcard deck
 	public void Deck() {
 		
-		System.out.println(deck);
+		
+		System.out.println(deck); 
 		
 	}
 	///////
@@ -49,6 +50,9 @@ public class Flashcard extends Label {
 		
 		lnew.setText(question);
 		lnew.setTextFill(Color.RED);
+		lnew.setWrapText(true);
+		lnew.setMaxWidth(160);
+		lnew.setMaxHeight(5);
 		return lnew;
 		
 	}
@@ -58,6 +62,9 @@ public class Flashcard extends Label {
 		
 		lnew.setText(answer);
 		lnew.setTextFill(Color.GREEN);
+		lnew.setWrapText(true);
+		lnew.setMaxWidth(160);
+		lnew.setMaxHeight(5);
 		return lnew;
 	}
 	
